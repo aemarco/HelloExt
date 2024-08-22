@@ -1,0 +1,21 @@
+{
+    "manifest_version": 3,
+    "name": "HelloExt",
+    "description": "Ext get started",
+    "version": "1.0",
+    "action": {
+      "default_popup": "ext/hello.html",
+      "default_icon": "images/hello.png"
+    },
+
+    "content_scripts": [
+    {
+      "js": ["cs/content.js"],
+      "matches": [
+        "https://developer.chrome.com/docs/extensions/*",
+        "https://www.youtube.com/watch*"
+      ],
+      "runat": "document_end"
+    }
+  ]
+  }
